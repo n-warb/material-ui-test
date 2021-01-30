@@ -1,24 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import { Button, makeStyles } from '@material-ui/core';
+import Grid from "@material-ui/core/Grid";
+
+const useStyles = makeStyles({
+  container: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',  
+  },  
+});
 
 function App() {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <Grid container    className={classes.container}>
+  <Grid item  >
+  <Button variant="contained" color="primary">
+  Primary
+</Button>
+  </Grid>
+</Grid>
+
   );
 }
 
